@@ -13,7 +13,7 @@ module Crunchbase
       :updated_at, :image, :video_embeds, :external_links, :web_presences
 
     def self.find(first_name, last_name)
-      get(API.permalink({first_name: first_name, last_name: last_name}, "people")["permalink"])
+      get(API.permalink({:first_name=> first_name, :last_name=> last_name}, "people")["permalink"])
     end
     
     def initialize(json)
