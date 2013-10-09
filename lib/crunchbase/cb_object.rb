@@ -27,7 +27,7 @@ module Crunchbase
     # Finds an entity by its name. Uses two HTTP requests; one to find the
     # permalink, and another to request the actual entity.
     def self.find(name)
-      get(API.permalink({name: name}, self::ENT_PLURAL)["permalink"])
+      get(API.permalink({:name=> name}, self::ENT_PLURAL)["permalink"])
     end
     
     # Requests a list of all entities of a given type. Returns the list as an
